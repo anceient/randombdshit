@@ -38,10 +38,10 @@
 	--chtabs-selected-opacity: .5; /* Default .5; */
 	--chtabs-tab-color: rgba(0,0,0,0); /* Default rgba(0,0,0,0.2); */
 	--chtabs-tab-border-radius: 0px; /* Default 0px; */
-  --chtabs-font-weight: 600; /* Default 600; */
-  --chtabs-font-size: 14px; /* Default 14px; */
-  --chtabs-text-color: rgb(255,255,255); /* Default rgb(255,255,255); */
-  --chtabs-background-overlay: rgba(0,0,0,0.6); /* Default rgba(0,0,0,0.6); */
+	--chtabs-font-weight: 600; /* Default 600; */
+	--chtabs-font-size: 14px; /* Default 14px; */
+	--chtabs-text-color: rgb(255,255,255); /* Default rgb(255,255,255); */
+	--chtabs-background-overlay: rgba(0,0,0,0.6); /* Default rgba(0,0,0,0.6); */
 }
 
 
