@@ -1,0 +1,133 @@
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css");
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
+:root{
+	/* Popout settings menu */
+	--settingsmodalbackground: transparent;
+	--settingsmodalwidth: 960px;
+	--settingsmodalheight: 80vh;
+	--settingsmenu-border-radius: 5px; /* Default 5px; */
+	--settingsmenu-margin: auto; /* Default auto; */
+	--settingsmenu-box-shadow: var(--main-color) 0px 6px 30px -10px; /* Default var(--main-color) 0px 6px 30px -10px; */
+	--settingsmenu-padding: 0; /* Default 0; */
+	
+	/* Radial status */
+	--rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+	--rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+	--rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+
+	--rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+	--rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+	--rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+
+	--rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+
+	--rs-online-color: #43b581; /* Colour for online status */
+	--rs-idle-color: #faa61a; /* Colour for idle status */
+	--rs-dnd-color: #f04747; /* Colour for dnd status */
+	--rs-offline-color: #636b75; /* Colour for offline status */
+	--rs-streaming-color: #643da7; /* Colour for streaming status */
+	--rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+	--rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+
+	--rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+
+	/* Channel tabs */
+	--chtabs-closebutton-color: rgb(100,0,0); /* Default rgb(72,0,0); */
+	--chtabs-closebutton-hovercolor:rgb(255,0,0); /* Default rgb(255,0,0); */
+	--chtabs-hover-opacity: .5; /* Default .5; */
+	--chtabs-selected-opacity: .5; /* Default .5; */
+	--chtabs-tab-color: rgba(0,0,0,0); /* Default rgba(0,0,0,0.2); */
+	--chtabs-tab-border-radius: 0px; /* Default 0px; */
+  --chtabs-font-weight: 600; /* Default 600; */
+  --chtabs-font-size: 14px; /* Default 14px; */
+  --chtabs-text-color: rgb(255,255,255); /* Default rgb(255,255,255); */
+  --chtabs-background-overlay: rgba(0,0,0,0.6); /* Default rgba(0,0,0,0.6); */
+}
+
+
+
+/* Popout settings menu Yoinked from mwittriens synthwave '86 theme */
+#app-mount .layer-86YKbF~.layer-86YKbF {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: var(--settingsmodalbackground) !important;
+  border-radius: var(--settingsmenu-border-radius) !important;
+  width: var(--settingsmodalwidth) !important;
+  height: var(--settingsmodalheight) !important;
+  margin: var(--settingsmenu-margin) !important;
+  padding: var(--settingsmenu-padding) !important;
+  overflow: hidden !important;
+  contain: unset !important;
+  z-index: 1000 !important;
+  box-shadow: var(--settingsmenu-box-shadow) !important;
+}
+
+/*Fixing unthemed tabs*/
+.channelTabs-tab{
+  background: var(--chtabs-tab-color) !important;
+  border-radius: var(--chtabs-tab-border-radius) !important;
+}
+.channelTabs-tabContainer{
+  background: var(--chtabs-background-overlay) !important;
+}
+.channelTabs-tab:hover{
+  background-color: var(--hover-color) !important;
+  opacity: var(--chtabs-hoveropacity) !important;
+}
+.channelTabs-selected:hover,
+.channelTabs-fav:hover{
+  background-color: var(--hover-color) !important;
+  opacity: var(--chtabs-hoveropacity) !important;
+}
+.channelTabs-selected,
+.channelTabs-fav,
+.channelTabs-favContainer{
+  background-color: var(--main-color) !important;
+  opacity: var(--chtabs-selected-opacity) !important;
+}
+/*Colors and fonts*/
+.channelTabs-tabName,
+.channelTabs-tabIcon ~ .channelTabs-tabName,
+.channelTabs-favIcon ~ .channelTabs-favName{
+  font: var(--main-font) !important;
+  font-weight: var(--chtabs-font-weight) !important;
+  font-size: var(--chtabs-font-size) !important;
+  color: var(--chtabs-text-color) !important;
+}
+.channelTabs-newTab:hover{
+  background: var(--hover-color) !important; 
+  color: white !important;
+}
+.channelTabs-newTab{
+  background: var(--main-color) !important; 
+  color: white !important;
+}
+.channelTabs-closeTab,
+.channelTabs-selected .channelTabs-closeTab{
+  background: transparent !important; 
+  color: var(--chtabs-closebutton-color) !important;
+}
+.channelTabs-closeTab:hover,
+.channelTabs-selected .channelTabs-closeTab:hover{
+  background: transparent !important; 
+  color: var(--chtabs-closebutton-hovercolor) !important;
+}
+.channelTabs-mentionBadge{
+  background-color: var(--main-color) !important;
+}
+.channelTabs-unreadBadge{
+  background-color: var(--main-color) !important;
+}
+.channelTabs-favMentionBadge,
+.channelTabs-favUnreadBadge,
+.channelTabs-fav .channelTabs-noMention,
+.channelTabs-fav .channelTabs-noUnread{
+  color: white !important;
+}
+.channelTabs-noFavNotice{
+  color: var(--chtabs-text-color) !important;
+  font: var(--main-font) !important;
+}
